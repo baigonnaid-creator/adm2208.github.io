@@ -1,0 +1,295 @@
+<!DOCTYPE1 html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XII TKJ A</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #f4f7f6;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        header {
+            background: linear-gradient(135deg, #4a90e2, #50e3c2);
+            color: white;
+            text-align: center;
+            padding: 4rem 1rem;
+        }
+
+        header h1 {
+            font-size: 2.8rem;
+            margin-bottom: 0.5rem;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+
+        nav {
+            background: #ffffff;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            padding: 1rem;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 600;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #4a90e2;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+
+        section {
+            margin-bottom: 3rem;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            color: #2c3e50;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            width: 50px;
+            height: 3px;
+            background: #4a90e2;
+            display: block;
+            margin: 8px auto 0;
+            border-radius: 2px;
+        }
+
+        /* Galeri Foto */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .gallery-item {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+
+        .gallery-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .gallery-item .desc {
+            padding: 1rem;
+            text-align: center;
+            font-size: 0.95rem;
+        }
+
+        /* Anggota Kelas */
+        .students-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 15px;
+        }
+
+        .student-card {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            text-align: center;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+
+        .student-card .avatar {
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            background: #e0e0e0;
+            margin: 0 auto 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            color: #666;
+        }
+
+        .student-card h3 {
+            font-size: 1.1rem;
+            margin-bottom: 5px;
+        }
+
+        .student-card p {
+            font-size: 0.85rem;
+            color: #777;
+            font-style: italic;
+        }
+
+        /* Pesan & Kesan */
+        .messages-list {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+
+        .message-item {
+            border-bottom: 1px solid #eee;
+            padding: 1rem 0;
+        }
+
+        .message-item:last-child {
+            border-bottom: none;
+        }
+
+        .message-item .author {
+            font-weight: bold;
+            color: #4a90e2;
+        }
+
+        footer {
+            text-align: center;
+            padding: 2rem;
+            background: #2c3e50;
+            color: white;
+            margin-top: 3rem;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Kenangan Kelas XII IPA 1</h1>
+        <p>Tahun Ajaran 2023 - 2024 • Kisah Indah yang Tak Kan Terlupakan</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#galeri">Galeri</a></li>
+            <li><a href="#anggota">Anggota</a></li>
+            <li><a href="#kesan">Kesan & Pesan</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        
+        <!-- Galeri Foto -->
+        <section id="galeri">
+            <h2 class="section-title">Galeri Momen</h2>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="https://via.placeholder.com/400x300?text=Foto+Studi+Turu" alt="Momen 1">
+                    <div class="desc">Acara Study Tour Ke Bali</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://via.placeholder.com/400x300?text=Foto+Classmeeting" alt="Momen 2">
+                    <div class="desc">Juara 1 Classmeeting Futsal</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://via.placeholder.com/400x300?text=Foto+Ulang+Tahun+Wali+Kelas" alt="Momen 3">
+                    <div class="desc">Kejutkan Wali Kelas</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://via.placeholder.com/400x300?text=Foto+Hari+Kartini" alt="Momen 4">
+                    <div class="desc">Peringatan Hari Kartini</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Anggota Kelas -->
+        <section id="anggota">
+            <h2 class="section-title">Siswa & Wali Kelas</h2>
+            <div class="students-grid">
+                <div class="student-card">
+                    <div class="avatar">👨‍🏫</div>
+                    <h3>Pak Budi</h3>
+                    <p>"Tetap semangat meraih mimpi!"</p>
+                </div>
+                <div class="student-card">
+                    <div class="avatar">👨</div>
+                    <h3>Andi</h3>
+                    <p>"Si Paling Sering Terlambat"</p>
+                </div>
+                <div class="student-card">
+                    <div class="avatar">👩</div>
+                    <h3>Siti</h3>
+                    <p>"Juara Kelas & Tempat Nyontek"</p>
+                </div>
+                <div class="student-card">
+                    <div class="avatar">👨</div>
+                    <h3>Budi</h3>
+                    <p>"Ketua Kelas Seumur Hidup"</p>
+                </div>
+                <div class="student-card">
+                    <div class="avatar">👩</div>
+                    <h3>Dewi</h3>
+                    <p>"Bendahara Paling Galak"</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Pesan & Kesan -->
+        <section id="kesan">
+            <h2 class="section-title">Kesan & Pesan</h2>
+            <div class="messages-list">
+                <div class="message-item">
+                    <div class="author">Andi</div>
+                    <p>"Makasih buat 3 tahunnya teman-teman. Masa SMA ga bakal se-seru ini tanpa kalian!"</p>
+                </div>
+                <div class="message-item">
+                    <div class="author">Siti</div>
+                    <p>"Jangan lupa sama janji kita buat kumpul lagi 5 tahun dari sekarang ya!"</p>
+                </div>
+                <div class="message-item">
+                    <div class="author">Budi</div>
+                    <p>"Sukses buat kuliah dan kerjaannya semuanya. Doa terbaik buat XII IPA 1!"</p>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Kenangan Kelas. Dibuat dengan ❤ untuk Kebersamaan Kita.</p>
+    </footer>
+
+</body>
+</html>
